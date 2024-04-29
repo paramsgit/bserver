@@ -13,7 +13,7 @@ app.use(bodyParser.json());
 app.post('/api/data', (req, res) => {
   const {isOn} = req.body;
   console.log('Received data:', isOn);
-  if(isOn==undefined){
+  if(isOn===undefined){
     return res.status(401).json({message:"Data not found"})
   }
   res.send('Data received successfully!');
